@@ -7,8 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1OFaISHvsP-emqCJMqFHsY5iqfQYDXTef
 """
 
-!pip install streamlit ngrok pyngrok
-
 # Commented out IPython magic to ensure Python compatibility.
 # %%writefile app.py
 # import streamlit as st
@@ -368,17 +366,3 @@ Original file is located at
 #         """)
 # 
 #
-
-from pyngrok import ngrok
-import os
-
-NGROK_AUTH_TOKEN = "2qVgqGJNriFpxmGja2GKAQu85cf_7bBgWHtR3Ztss79aqm6s5"
-ngrok.set_auth_token(NGROK_AUTH_TOKEN)
-
-# Jalankan Streamlit
-os.system("streamlit run app.py &")
-
-# Tautkan ngrok ke Streamlit
-# Change made: specify the protocol (http) and port in the 'addr' parameter
-public_url = ngrok.connect(addr="http://localhost:8501")
-print(f"Public URL: {public_url}")
