@@ -22,12 +22,6 @@ pipenv shell
 pip install -r requirements.txt
 ```
 
-## Set NGROK_AUTH_TOKEN
-Make sure to set your NGROK_AUTH_TOKEN in the environment variable for local testing:
-```bash
-export NGROK_AUTH_TOKEN="your_ngrok_auth_token_here"
-```
-
 ## Run Streamlit App
 ```bash
 streamlit run Python.py
